@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+div.ControlsRow,div.HeadersRow {
+	font-family: Georgia;
+}
+
+div.Canvas {
+	font-family: Lucida Console, Georgia;
+	font-size: 13px;
+	background-color: #ECECEC;
+	color: #000000;
+	border: solid 1px #CECECE;
+}
+
+/*key*/
+.CodeContainer .key {
+	/*color: #CC0000;
+    color: aqua !important;*/
+    color: #ff7d27 !important;
+	font-weight: bold;
+}
+
+/*string*/
+.CodeContainer .str {
+	/*color: #007777;*/
+    /*color: #5ce638 !important;*/
+    /*color: #ff9e7b !important;*/
+    color: #d3d3d3  !important;
+}
+
+/*number*/
+.CodeContainer .num {
+	/*color: #AA00AA;*/
+    color: #e3e658 !important
+}
+
+/*boolean*/
+.CodeContainer .bool {
+	/*color: #0000FF;*/
+    color: #5ce638 !important;
+}
+
+.CodeContainer .null {
+	/*color: #0000FF;*/
+    color: #5ce638 !important;
+}
+
+.CodeContainer .brace {
+	/*color: #00AA00;*/
+    color: #CC0000;
+	font-weight: bold;
+}
+
+/*array brace*/
+.CodeContainer .arr {
+	color: #FF9393;
+	font-weight: bold;
+}
+
+.CodeContainer .comma {
+	color: #000000;
+	font-weight: bold;
+}
+
+/*function*/
+.CodeContainer .fun {
+	color: #AA6633;
+	text-decoration: italic;
+}
+
+PRE.CodeContainer {
+	margin-top: 0px;
+	margin-bottom: 0px;
+    background-color: #020202 !important;
+}
+
+PRE.CodeContainer img {
+	cursor: pointer;
+	border: none;
+	margin-bottom: -1px;
+}
+
+#CollapsibleViewDetail a {
+	padding-left: 10px;
+}
+
+#ControlsRow {
+	white-space: nowrap;
+	font: 11px Georgia;
+}
+
+#TabSizeHolder {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#HeaderTitle {
+	text-align: right;
+	font-size: 11px;
+}
+
+#HeaderSubTitle {
+	margin-bottom: 2px;
+	margin-top: 0px
+}
+
+A.OtherToolsLink {
+	color: #555;
+	text-decoration: none;
+}
+
+A.OtherToolsLink:hover {
+	text-decoration: underline;
+}
+
+.CodeContainer .count {
+	color: #AA00AA;
+}

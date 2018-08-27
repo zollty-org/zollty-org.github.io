@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>在线代码格式化</title>
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="./basic.css" type="text/css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+
+    <link href="./s.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="./c.js"></script>
+
+</head>
+<body>
+
+<div id="mainContent" class="tool_content wrapper">
+    <div class="toolUsing clearfix">
+        <div class="toolsTab clearfix">
+            <ul class="nav nav-tabs">
+                <li><a href="http://tool.oschina.net/codeformat/xml">XML格式化</a></li>
+                <li><a href="http://tool.oschina.net/codeformat/css">CSS格式化</a></li>
+                <li class="active"><a href="json.html" target="_blank">JSON格式化</a></li>
+                <li><a href="jszip.html">JavaScript压缩</a></li>
+                <li><a href="jsformat.html">JavaScript/HTML格式化</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+
+        
+    </div>
+</div>
+
+<div style="margin:0 auto; width:80%">
+        <div class="topBar">
+            <div class="title">待格式化JSON：</div>
+            <div class="resizable-textarea">
+              <!--<span></span>-->
+              <textarea name="json" id="RawJson" style="resize: none; opacity: 1; " class="resizable processed"></textarea>
+            </div>
+        </div>
+        <div class="operateTB form-inline">
+            <label for="TabSize">缩进量：</label>
+            <select id="TabSize" onchange="TabSizeChanged()" class="span1">
+                <option value="1">1</option>
+                <option value="2" selected="true">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <label for="QuoteKeys" class="checkbox">
+                <input type="checkbox" id="QuoteKeys" onclick="QuoteKeysClicked()" checked="true">引号
+            </label>
+            <span id="CollapsibleViewHolder">
+              <label for="CollapsibleView" class="checkbox">
+                <input type="checkbox" id="CollapsibleView" onclick="CollapsibleViewClicked()" checked="true">显示控制
+              </label>
+            </span>
+            <span id="CollapsibleViewDetail" style="visibility: visible;margin-right:10px; ">
+                <a href="javascript:void(0);" onclick="ExpandAllClicked()">展开</a>
+                <a href="javascript:void(0);" onclick="CollapseAllClicked()">叠起</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(3)">2级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(4)">3级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(5)">4级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(6)">5级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(7)">6级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(8)">7级</a>
+                <a href="javascript:void(0);" onclick="CollapseLevel(9)">8级</a>
+            </span>
+            <input class="btn btn-small btn-primary" data-loading-text="正在格式化json..." id="format" type="button" onclick="Process()" value="格式化">
+        </div>
+        <div class="bottomBar">
+            <div class="resizable-textarea">
+                <!--<span></span>-->
+                <div id="Canvas" class="Canvas well resizable processed" style="margin-bottom: 0px; opacity: 1;">
+                    <pre class="CodeContainer"></pre>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+</body>
+</html>
